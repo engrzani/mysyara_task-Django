@@ -1,0 +1,18 @@
+<!-- templates/today_usage/today_usage_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Today's Usage List</title>
+  </head>
+  <body>
+    <h1>Today's Usage List</h1>
+    <ul>
+      {% for usage in today_usage %}
+      <li>{{ usage.item }} - {{ usage.quantity }}</li>
+      {% endfor %}
+    </ul>
+    <a href="{% url 'today_usage_create' %}">Record Today's Usage</a>
+  </body>
+</html>

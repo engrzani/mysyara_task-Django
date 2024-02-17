@@ -1,0 +1,16 @@
+<!-- templates/inventory/inventory_detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory Detail</title>
+  </head>
+  <body>
+    <h1>Inventory Detail</h1>
+    <p><strong>Description:</strong> {{ inventory_item.description }}</p>
+    <p><strong>Part Number:</strong> {{ inventory_item.part_number }}</p>
+    <!-- Add other fields as needed -->
+    <a href="{% url 'inventory_list' %}">Back to List</a>
+  </body>
+</html>

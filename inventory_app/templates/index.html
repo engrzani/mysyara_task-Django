@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MySyara Inventory Management</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/styles.css' %}"
+    />
+    <style>
+      body {
+        background-color: #f3f3f3;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+      }
+
+      nav ul li {
+        margin-right: 20px;
+      }
+
+      nav ul li:last-child {
+        margin-right: 0;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        color: #ff0000;
+      }
+
+      section {
+        margin-bottom: 30px;
+      }
+
+      footer {
+        text-align: center;
+        color: #666;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div>
+          <img
+            src="{% static 'img/logo.png' %}"
+            alt="MySyara Logo"
+            style="width: 100px"
+          />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="{% url 'inventory_list' %}"> Inventory</a></li>
+            <li>
+              <a href="{% url 'inventory_create' %}">Add Inventory </a>
+            </li>
+            <li><a href="{% url 'today_usage_list' %}">Today Usage</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section>
+        <h2>About MySyara Inventory Management</h2>
+        <p>
+          This is a simple inventory management system designed for MySyara. You
+          can view, add, update, and delete inventory items using this
+          application.
+        </p>
+        <p>
+            On-demand car care & technology company. From mobile car washing & detailing to oil changes & diagnostics & on-time servicing, MySyara offers a convenient, trusted & professional service. At home or at work, MySyara arrives with water, power and all the tools needed to complete the job, all we need is your keys. Free pick up & drop with any major repairs and on-time vehicle servicing. With all our on-demand, high-quality car care services, we offer a 100% satisfaction guarantee. Our experienced employees have over 100 hours of training, background checks, and full insurance policies.
+        </p>
+        <!-- Additional image -->
+        <img src="{% static 'img/1.jpg' %}" alt="Our People" style="width: 300px;">
+    </section>
+      </section>
+      <footer>
+        <p>&copy; 2024 MySyara. All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>
